@@ -13,10 +13,10 @@ function isIE() {
 
 export const msalApp = new UserAgentApplication({
   auth: {
-    clientId: '47ee545d-7bd2-47de-b86e-586333b4145c', // TODO: move this into a cfg value from composition root
+    clientId: 'b032496c-f340-42d5-bc22-13a916c6f6bf', // TODO: move this into a cfg value from composition root
     authority: 'https://login.microsoftonline.com/common',
     validateAuthority: true,
-    postLogoutRedirectUri: 'http://35.240.211.44',
+    postLogoutRedirectUri: 'https://teamsmeetingdemo.classcom.app',
     navigateToLoginRequestUrl: false
   },
   cache: {

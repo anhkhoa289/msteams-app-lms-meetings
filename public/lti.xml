@@ -4,16 +4,16 @@
 <blti:icon>
 https://demonstrate.classcom.app/images/logo/logo.svg
 </blti:icon>
-<blti:launch_url>https://eb61686e.ngrok.io/</blti:launch_url>
+<blti:launch_url>http://35.240.211.44/</blti:launch_url>
  <blti:extensions platform="canvas.instructure.com">
    <lticm:property name="tool_id">microsoft-team-fxd</lticm:property>
    <lticm:property name="privacy_level">public</lticm:property>
-   <lticm:property name="domain">https://eb61686e.ngrok.io/</lticm:property>
+   <lticm:property name="domain">http://35.240.211.44/</lticm:property>
     <lticm:options name="course_navigation">
         <lticm:property name="enabled">true</lticm:property>
     </lticm:options>
     <lticm:options name="editor_button">
-        <lticm:property name="url">https://eb61686e.ngrok.io/</lticm:property>
+        <lticm:property name="url">http://35.240.211.44/</lticm:property>
         <lticm:property name="icon_url">https://demonstrate.classcom.app/images/logo/logo.svg</lticm:property>
         <lticm:property name="text">Microsoft Teams - Meeting</lticm:property>
         <lticm:property name="selection_width">500</lticm:property>

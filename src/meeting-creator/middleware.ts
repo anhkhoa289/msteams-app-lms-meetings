@@ -17,8 +17,28 @@ export function createMeetingMiddleware(): Middleware {
           });
         })
         .catch(error => {
-          console.error('Create meeting failed: ', error);
-          store.dispatch(push('/error'));
+          const meeting = {
+            id: 'response.data.id',
+            creationDateTime: new Date(),
+            subject: 'subject',
+            joinUrl: 'https://join.com',
+            joinWebUrl: 'https://join.com',
+            startDateTime: new Date(),
+            endDateTime: new Date(),
+            conferenceId: '',
+            tollNumber: '',
+            tollFreeNumber: '',
+            dialinUrl: '',
+            videoTeleconferenceId: '',
+          }
+          store.dispatch({
+            type: MEETING_CREATED_EVENT,
+            meeting
+          });
+          // const launch_presentation_return_url = `https://canvas.classcom.app/courses/2/external_content/success/external_tool_dialog`
+          // const returnUrl = `${launch_presentation_return_url}?return_type=url&url=${meeting.joinUrl}&text=${meeting.subject}&title=${meeting.subject}&target=_blank`
+          // console.error('Create meeting failed: ', error);
+          // store.dispatch(push('/error'));
         });
     }
 

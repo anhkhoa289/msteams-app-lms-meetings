@@ -23,10 +23,11 @@ app.post('/manifest.json', (req, res, next) => {
   res.sendFile(path.join(__dirname + '/build/manifest.json'));
 })
 
-app.get('*', (req, res) =>{
+app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname + '/build/index.html'));
 });
-app.post('*', (req, res) =>{
+app.post('*', (req, res) => {
+  console.log(req.body)
   res.sendFile(path.join(__dirname + '/build/index.html'));
 });
 

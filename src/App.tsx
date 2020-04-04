@@ -2,7 +2,7 @@ import React from 'react';
 import { createHashHistory } from 'history';
 import { applyMiddleware, createStore, compose } from 'redux';
 import { Provider } from 'react-redux';
-import { Route, Switch } from 'react-router';
+import { Route, Switch, useLocation } from 'react-router';
 import { ConnectedRouter, routerMiddleware } from 'connected-react-router';
 import SigninPage from './SigninPage';
 import { createAuthMiddleware } from './auth/middleware';
@@ -35,6 +35,7 @@ const store = createStore(
 );
 
 function App() {
+  localStorage.setItem('launch_presentation_return_url', new URLSearchParams(window.location.search).get('launch_presentation_return_url') ?? '');
   return (
     <Provider store={store}>
       <ConnectedRouter history={hist}>
